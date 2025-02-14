@@ -48,7 +48,7 @@ int main(){
     cout << "Enter coordinates for y2: ";
     cin >> y2;
 
-    LineComparison Line1(x1, y1, x2, y2); // line 1 object
+    LineComparison Line1(x1, y1, x2, y2); // line 1 object for LineComparison class
 
     length1 = Line1.calculateLength(); // Calculate length for line 1
 
@@ -65,7 +65,7 @@ int main(){
     cout << "Enter coordinates for y2: ";
     cin >> y2;
 
-    LineComparison Line2(x1, y1, x2, y2); // line 2 object
+    LineComparison Line2(x1, y1, x2, y2); // line 2 object for LineComparison class
 
     length2 = Line2.calculateLength(); // Calculate length for line 2
 
