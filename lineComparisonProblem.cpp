@@ -32,10 +32,18 @@ public:
 
     // UC2: Line Equality
 
-    // Overloading == to compare lengths
+    // Overloading (==) operator to compare lengths
 
     bool operator==(const LineComparison& other) const{
         return this->calculateLength() == other.calculateLength();
+    }
+
+    // UC3: Line Comparison
+
+    // Overloading (>) operator to compare lengths
+
+    bool operator>(const LineComparison& other) const{
+        return this->calculateLength() > other.calculateLength();
     }
 };
 
@@ -82,11 +90,19 @@ int main(){
     cout << "\nLength of Line 1: " << length1;
     cout << "\nLength of Line 2: " << length2 << "\n";
 
-    // UC2: Line Equality
+    // UC3 : Line Comparison
 
-    // Display whether Line 1 and Line 2 are equal or not
+    // Compare Line 1 and Line 2
 
-    cout << (Line1 == Line2 ? "\nLength of Line 1 and Line 2 are equal" : "\nLength of Line 1 and Line 2 are not equal");
+    if(Line1 == Line2){ // UC2: Line Equality
+        cout << "\nLine 1 and Line 2 are equal";
+    }
+    else if(Line1 > Line2){
+        cout << "\nLine 1 is greater than line 2";
+    }
+    else{
+        cout << "\nLine 1 is smaller than line 2";
+    }
 
     return 0;
 }
