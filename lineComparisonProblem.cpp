@@ -18,7 +18,7 @@ public:
 
     // UC1: Calculte Length
 
-    double calculateLength(){ // function to calculate the length of line
+    double calculateLength() const{ // function to calculate the length of line
 
         double length;
 
@@ -28,6 +28,14 @@ public:
         length = sqrt((x*x) + (y*y));
 
         return length;
+    }
+
+    // UC2: Line Equality
+
+    // Overloading == to compare lengths
+
+    bool operator==(const LineComparison& other) const{
+        return this->calculateLength() == other.calculateLength();
     }
 };
 
@@ -72,7 +80,13 @@ int main(){
     length2 = Line2.calculateLength(); // Calculate length for line 2
 
     cout << "\nLength of Line 1: " << length1;
-    cout << "\nLength of Line 2: " << length2;
+    cout << "\nLength of Line 2: " << length2 << "\n";
+
+    // UC2: Line Equality
+
+    // Display whether Line 1 and Line 2 are equal or not
+
+    cout << (Line1 == Line2 ? "\nLength of Line 1 and Line 2 are equal" : "\nLength of Line 1 and Line 2 are not equal");
 
     return 0;
 }
