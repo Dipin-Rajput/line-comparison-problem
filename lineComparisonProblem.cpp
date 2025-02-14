@@ -16,6 +16,8 @@ public:
         this->y2 = y2;
     }
 
+    // UC1: Calculte Length
+
     double calculateLength(){ // function to calculate the length of line
 
         double length;
